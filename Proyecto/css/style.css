@@ -12,7 +12,16 @@ header {
     width: 100%; 
     text-align: center; 
 }
+.logo{
+    width: 300px;
+    border: 0px;
+    padding: 0px;
+    display: block;
+}
 
+.listafooter{
+    position: fixed;
+}
 header h1 {
     margin: 0;
     text-align: center;
