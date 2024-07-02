@@ -1,98 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Notas Finales</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .container {
-            display: flex;
-            max-width: 75%;
-            margin: auto;
-            gap: 30px;
-        }
-        .inputs, .results {
-            flex: 1;
-            margin-right: 30px;
-        }
-        input, button {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-            padding: 10px;
-            box-sizing: border-box;
-            min-width: 200px;
-        }
-        .result, .notas {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f4f4f4;
-        }
-        ul {
-            padding-left: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="tecnico electronico, tecnico electrónico , electricista, refrigeracion, tecnico en refrigeracion, empresa de refrigeracion">
+  <title> Airlec.SRL </title>
+  <link rel="icon" href="assets/icono PNG.png" type="image/png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Bootstrap JS (jQuery and Popper.js dependencies) -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/b8336f6549.js" crossorigin="anonymous"></script>
+
 </head>
+<header>
+    <!-- Navbar Bootstrap -->
+    <nav id="myNavbar" class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html"><img src="assets/AIRELEC LOGO SIN SLOGAN PNG.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link" href="pages/contacto.html">Contacto<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pages/servicios.html">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pages/trabajosrealizados.html">Trabajos realizados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pages/sistemaelectrico.html">Sistema electrico</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 <body>
-    <div class="container">
-        <div class="inputs">
-            <h1>Calculadora de Notas Finales</h1>
-            <label for="nota">Ingrese la nota del alumno:</label>
-            <input type="number" id="nota" placeholder="Ingrese la nota del alumno">
-            <button id="agregarNotaButton">Agregar Nota</button>
-            <button id="calcularPromedioButton">Calcular Promedio</button>
-            <button id="limpiarButton">Limpiar Notas</button>
-            <div class="result" id="result"></div>
-        </div>
-        <div class="results">
-            <h2>Notas Ingresadas</h2>
-            <ul class="notas" id="notasList"></ul>
-        </div>
+  
+  <div class="video-container">
+    <!-- Video de fondo -->
+    <video autoplay muted loop id="video-background">
+      <source src="https://cdn.pixabay.com/video/2022/01/17/104709-668317770_large.mp4" type="video/mp4">
+    </video>
+
+    <!-- Logo -->
+    <div class="logoinicio">
+      <img src="assets/AIRELEC LOGO COMPLETO PNG.png" alt="Logo"> <!-- Logo a la izquierda -->
+  </p>
     </div>
-    <div class="container">
-        <div class="inputs">
-            <h2>Calculadora</h2>
-            <label for="num1">Número 1:</label>
-            <input type="number" id="num1" placeholder="Número 1">
-            <label for="num2">Número 2:</label>
-            <input type="number" id="num2" placeholder="Número 2">
-            <button id="sumarButton">Sumar</button>
-            <button id="restarButton">Restar</button>
-            <button id="multiplicarButton">Multiplicar</button>
-            <button id="dividirButton">Dividir</button>
-            <div class="result" id="resultOperaciones"></div>
-        </div>
+
+    <!-- Cuadro con texto del técnico -->
+    <div class="tecnico-box">
+      <p>
+        Somos una empresa especializada en soluciones integrales de refrigeración y trabajos eléctricos. Nos dedicamos a proporcionar servicios de instalación, mantenimiento y reparación de sistemas de refrigeración para una amplia gama de clientes, desde hogares hasta negocios comerciales e industriales.
+
+        Nuestro equipo de técnicos altamente capacitados cuenta con una amplia experiencia en el manejo de equipos de refrigeración de última generación, asegurando un servicio eficiente y de calidad. Además, ofrecemos servicios eléctricos complementarios para garantizar un funcionamiento óptimo de tus equipos, desde la instalación de sistemas eléctricos hasta la resolución de problemas y reparaciones.
+        
+        Ya sea que necesites instalar un nuevo sistema de refrigeración, mantener tus equipos existentes en óptimas condiciones o resolver problemas eléctricos, estamos aquí para proporcionarte soluciones confiables y profesionales. Nuestro compromiso es brindar un servicio excepcional que satisfaga tus necesidades y supere tus expectativas.
+      </p>
     </div>
-    <div class="container">
-        <div class="inputs">
-            <h2>Agregar Alumno</h2>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" placeholder="Nombre">
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" placeholder="Apellido">
-            <label for="notas">Notas (separadas por coma):</label>
-            <input type="text" id="notas" placeholder="Notas">
-            <button id="agregarAlumnoButton">Agregar Alumno</button>
-        </div>
-    </div>
-    <div class="container">
-        <div class="inputs">
-            <h2>Buscar Alumno</h2>
-            <label for="buscar">Buscar por nombre o apellido:</label>
-            <input type="text" id="buscar" placeholder="Buscar">
-            <button id="buscarAlumnoButton">Buscar</button>
-        </div>
-    </div>
-    <div class="container">
-        <div class="results">
-            <h2>Lista de Alumnos</h2>
-            <ul id="listaAlumnos"></ul>
-        </div>
-    </div>
-    <script src="script.js"></script>
+  </div>
+  <div id="whatsapp-button">
+    <a href="https://walink.co/385e80" target="_blank">
+      <img id="wspimg" src="assets/whatsapp.svg" alt="WhatsApp">
+    </a>
+  </div>
+
 </body>
+
+  <!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="text-left">
+      <p>Derechos de autor © 2024 Empresa.</p>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://ar.linkedin.com" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
 </html>
