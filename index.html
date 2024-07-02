@@ -3,49 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Técnico en Aire</title>
-    <link rel="stylesheet" href="css/style.css"">
+    <title>Calculadora de Notas Finales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            display: flex;
+            max-width: 75%;
+            margin: auto;
+            gap: 30px;
+        }
+        .inputs, .results {
+            flex: 1;
+            margin-right: 30px;
+        }
+        input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            min-width: 200px;
+        }
+        .result, .notas {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img class="logo" src="assets/Logo.png" alt="">
-        <nav>
-            <ul class="listafooter">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="pages/servicios.html">Servicios</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
-                <li><a href="pages/sobrenosotros.html">Sobre nosotros</a></li>
-                <li><a href="pages/trabajosrealizados.html">Trabajos realizados</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section>
-            <h2>Bienvenido a Técnico en Aire</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel tortor nec nisi fermentum commodo.</p>
-            <img src="assets/air-conditioner-1614698_1280.png" class="image1">
-        </section>
-
-        <section>
-            <h2>Nuestros Servicios</h2>
-            <ul>
-                <li>Instalación de aire acondicionado</li>
-                <li>Mantenimiento preventivo</li>
-                <li>Reparación de equipos</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Contacto</h2>
-            <p>Póngase en contacto con nosotros para más información:</p>
-            <p>Direccion:</p>
-            <p>Telefono: 1234567</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Técnico en Aire</p>
-    </footer>
+    <div class="container">
+        <div class="inputs">
+            <h1>Calculadora de Notas Finales</h1>
+            <label for="nota">Ingrese la nota del alumno:</label>
+            <input type="number" id="nota" placeholder="Ingrese la nota del alumno">
+            <button id="agregarNotaButton">Agregar Nota</button>
+            <button id="calcularPromedioButton">Calcular Promedio</button>
+            <button id="limpiarButton">Limpiar Notas</button>
+            <div class="result" id="result"></div>
+        </div>
+        <div class="results">
+            <h2>Notas Ingresadas</h2>
+            <ul class="notas" id="notasList"></ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="inputs">
+            <h2>Calculadora</h2>
+            <label for="num1">Número 1:</label>
+            <input type="number" id="num1" placeholder="Número 1">
+            <label for="num2">Número 2:</label>
+            <input type="number" id="num2" placeholder="Número 2">
+            <button id="sumarButton">Sumar</button>
+            <button id="restarButton">Restar</button>
+            <button id="multiplicarButton">Multiplicar</button>
+            <button id="dividirButton">Dividir</button>
+            <div class="result" id="resultOperaciones"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="inputs">
+            <h2>Agregar Alumno</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Nombre">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" placeholder="Apellido">
+            <label for="notas">Notas (separadas por coma):</label>
+            <input type="text" id="notas" placeholder="Notas">
+            <button id="agregarAlumnoButton">Agregar Alumno</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="inputs">
+            <h2>Buscar Alumno</h2>
+            <label for="buscar">Buscar por nombre o apellido:</label>
+            <input type="text" id="buscar" placeholder="Buscar">
+            <button id="buscarAlumnoButton">Buscar</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="results">
+            <h2>Lista de Alumnos</h2>
+            <ul id="listaAlumnos"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
